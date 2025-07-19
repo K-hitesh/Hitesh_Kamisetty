@@ -1,11 +1,59 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Calendar, BarChart3, Globe, Database, Bot, Mail, Code } from 'lucide-react';
+import { ExternalLink, Github, Calendar, BarChart3, Globe, Database, Bot, Mail, Code, Brain, TrendingUp } from 'lucide-react';
 import { cn } from "@/lib/utils"; // ADDED THIS LINE: Import the cn utility
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Customer Churn Prediction and Retention Strategy",
+      description: "Acquired and cleaned telecom customer data using Python and SQL, improving dataset reliability by 92%. Used machine learning models (Logistic Regression, Random Forest) to predict churn, achieving 87% model accuracy. Presented churn insights via Power BI/Tableau dashboards, increasing stakeholder engagement by 70%. Automated monthly data ingestion and report generation using PySpark ETL pipeline, reducing manual work by 65%.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop", // Placeholder image: Replace with an image relevant to churn prediction/ML
+      date: "Jul 2024",
+      category: "Data Science | Machine Learning",
+      icon: Brain, // Appropriate icon for ML/strategy
+      technologies: ["Python", "Pandas", "NumPy", "SQL", "Power BI", "Tableau", "PySpark"],
+      achievements: [
+        "Acquired and cleaned telecom customer data using Python and SQL, improving dataset reliability by 92%.",
+        "Used machine learning models (Logistic Regression, Random Forest) to predict churn, achieving 87% model accuracy.",
+        "Presented churn insights via Power BI/Tableau dashboards, increasing stakeholder engagement by 70%.",
+        "Automated monthly data ingestion and report generation using PySpark ETL pipeline, reducing manual work by 65%."
+      ],
+      metrics: {
+        "Dataset Reliability": "92%",
+        "Model Accuracy": "87%",
+        "Stakeholder Engagement": "70%",
+        "Manual Work Reduction": "65%"
+      },
+      githubLink: "https://github.com/your-username/Customer-Churn-Prediction-Repo", // **UPDATE THIS LINK**
+      liveDemoLink: "#" // Replace with live demo link if available
+    },
+    {
+      title: "Retail Sales Analytics and Forecasting System",
+      description: "Consolidated multi-source retail data into Hive tables and transformed it with PySpark, enhancing data integration by 80%. Designed interactive dashboards in Power BI and Tableau to reveal product and regional trends, improving sales visibility by 75%. Forecasted future demand using ARIMA and Prophet models, raising forecasting accuracy to 82%. Optimized inventory planning based on analytics, leading to 20% fewer stockouts and 18% cost savings.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop", // Placeholder image: Replace with an image relevant to retail analytics/forecasting
+      date: "Oct 2023",
+      category: "Business Intelligence | Forecasting",
+      icon: TrendingUp, // Appropriate icon for analytics/forecasting
+      technologies: ["PySpark", "Power BI", "Tableau", "ARIMA", "Prophet"],
+      achievements: [
+        "Consolidated multi-source retail data into Hive tables and transformed it with PySpark, enhancing data integration by 80%.",
+        "Designed interactive dashboards in Power BI and Tableau to reveal product and regional trends, improving sales visibility by 75%.",
+        "Forecasted future demand using ARIMA and Prophet models, raising forecasting accuracy to 82%.",
+        "Optimized inventory planning based on analytics, leading to 20% fewer stockouts and 18% cost savings."
+      ],
+      metrics: {
+        "Data Integration Enhancement": "80%",
+        "Sales Visibility Improvement": "75%",
+        "Forecasting Accuracy": "82%",
+        "Stockouts Reduction": "20%",
+        "Cost Savings": "18%"
+      },
+      githubLink: "https://github.com/your-username/Retail-Sales-Analytics-Repo", // **UPDATE THIS LINK**
+      liveDemoLink: "#" // Replace with live demo link if available
+    },
+    // Existing projects:
     {
       title: "AutoFix Agent – Python-based Self-Healing UI Automation Bot",
       description: "Developed an intelligent self-healing agent using Python + Selenium that monitors web-based systems and autocorrects broken UI behaviors such as changed buttons, forms, or URL structures. Implemented a dynamic fallback system with 80% recovery success rate, using JSON. Utilizes JSON-driven healing logic with conditional scanning for 80%+ recovery accuracy. Reduced manual QA effort by 90% through resilient navigation and auto-submission capabilities.",
@@ -117,7 +165,7 @@ const Projects = () => {
     },
     {
       title: "ServiceXpress - Responsive Website",
-      description: "Developed a responsive website as part of a team effort, contributing to 30% of the overall design and layout implementation. Integrated APIs to form a smooth interface between the database and the platform.",
+      description: "Developed a responsive website as part of a team effort, contributing to 30% of the overall design and layout implementation. Integrated APIs to form a smooth interface between the database and the platform. As part of the entrepreneur project, we also developed a real-time web application called ServiceXpress.",
       image: "/service.jpeg", // Placeholder: Replace with a specific image for web development
       date: "Dec 2023",
       category: "Web Development",

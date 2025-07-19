@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
-import { Code, Database, BarChart3, Brain } from 'lucide-react';
+import { Code, Database, BarChart3, Brain } from 'lucide-react'; // Ensure all icons used are imported
 
 const Skills = () => {
   const skillCategories = [
@@ -9,52 +9,67 @@ const Skills = () => {
       title: "Programming Languages",
       icon: Code,
       skills: [
-        { name: "Java", level: 90 },
         { name: "Python", level: 85 },
-        { name: "JavaScript", level: 80 },
+        { name: "Java", level: 90 },
+        { name: "SQL", level: 90 },
         { name: "HTML/CSS", level: 85 },
-        { name: "ReactJS", level: 75 },
+        // Removed JavaScript and ReactJS as requested
       ]
     },
     {
-      title: "Data Management",
+      title: "Data Analysis & ML", // Renamed for broader scope
       icon: Database,
       skills: [
         { name: "MySQL", level: 90 },
-        { name: "MongoDB", level: 80 },
         { name: "MS Excel", level: 95 },
-        { name: "Machine Learning", level: 75 },
+        { name: "Pandas", level: 88 },
+        { name: "NumPy", level: 88 },
+        { name: "Scikit-learn", level: 80 },
         { name: "Data Visualization", level: 85 },
+        { name: "Power Query", level: 85 },
+        { name: "Machine Learning", level: 75 },
+        { name: "Statistical Analysis", level: 80 }, // Moved from additionalTools
+        { name: "Data Preprocessing", level: 85 }, // Moved from additionalTools
+        { name: "EDA", level: 85 }, // Moved from additionalTools
+        { name: "Data Mining", level: 75 }, // Moved from additionalTools
       ]
     },
     {
-      title: "Tools & Platforms",
+      title: "Tools & Technologies", // Renamed for broader scope
       icon: BarChart3,
       skills: [
-        { name: "Tableau", level: 85 },
         { name: "Power BI", level: 90 },
-        { name: "Hadoop", level: 70 },
-        { name: "Hive", level: 70 },
+        { name: "Tableau", level: 85 },
         { name: "PySpark", level: 75 },
+        { name: "Hive", level: 70 },
+        { name: "Hadoop", level: 70 },
+        { name: "Git", level: 85 },
+        { name: "GitHub", level: 85 },
+        { name: "BeautifulSoup", level: 70 },
+        { name: "ARIMA", level: 78 },
+        { name: "Prophet", level: 78 },
+        { name: "Pig", level: 65 }, // Moved from additionalTools (added placeholder level)
+        { name: "Scala", level: 60 }, // Moved from additionalTools (added placeholder level)
+        { name: "Data Frames", level: 70 }, // Moved from additionalTools (added placeholder level)
+        { name: "ETL", level: 75 }, // Moved from additionalTools (added placeholder level)
+        { name: "Business Intelligence", level: 85 }, // Moved from additionalTools (added placeholder level)
       ]
     },
     {
       title: "Soft Skills",
       icon: Brain,
       skills: [
+        { name: "Problem-Solving", level: 90 },
         { name: "Critical Thinking", level: 95 },
         { name: "Communication", level: 90 },
-        { name: "Problem-Solving", level: 90 },
-        { name: "Collaboration", level: 85 },
+        { name: "Team Collaboration", level: 85 },
         { name: "Adaptability", level: 88 },
       ]
     }
   ];
 
-  const additionalTools = [
-    "Pig", "Scala", "Data Frames", "Statistical Analysis", "Data Preprocessing", 
-    "EDA", "Data Visualization", "Business Intelligence", "ETL", "Data Mining"
-  ];
+  // The 'additionalTools' array is no longer needed as its contents are integrated above
+  // const additionalTools = []; 
 
   return (
     <section id="skills" className="py-20">
@@ -100,7 +115,8 @@ const Skills = () => {
             })}
           </div>
 
-          {/* Additional Tools */}
+          {/* Removed the "Additional Tools" card as its content has been integrated */}
+          {/*
           <Card className="bg-muted/50">
             <CardHeader>
               <CardTitle className="text-center">Additional Tools & Technologies</CardTitle>
@@ -119,6 +135,7 @@ const Skills = () => {
               </div>
             </CardContent>
           </Card>
+          */}
 
           {/* Skill Highlights */}
           <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -127,11 +144,11 @@ const Skills = () => {
               <p className="text-muted-foreground">Years Experience</p>
             </Card>
             <Card className="text-center p-6 hover:shadow-glow transition-smooth">
-              <div className="text-3xl font-bold text-primary mb-2">10+</div>
+              <div className="text-3xl font-bold text-primary mb-2">15+</div>
               <p className="text-muted-foreground">Technologies Mastered</p>
             </Card>
             <Card className="text-center p-6 hover:shadow-glow transition-smooth">
-              <div className="text-3xl font-bold text-primary mb-2">5+</div>
+              <div className="text-3xl font-bold text-primary mb-2">7+</div>
               <p className="text-muted-foreground">Major Projects</p>
             </Card>
           </div>

@@ -78,9 +78,12 @@ const Header = () => {
                 </a>
               </Button>
             </div>
-            <Button size="sm" className="shadow-glow">
-              <Download className="h-4 w-4 mr-2" />
-              Download CV
+            {/* Desktop Download CV Button */}
+            <Button size="sm" className="shadow-glow" asChild>
+              <a href="/Hitesh_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="h-4 w-4 mr-2" />
+                Download CV
+              </a>
             </Button>
           </div>
 
@@ -115,9 +118,12 @@ const Header = () => {
                     Email
                   </a>
                 </Button>
-                <Button size="sm" className="shadow-glow">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download CV
+                {/* Mobile Download CV Button */}
+                <Button size="sm" className="shadow-glow" asChild>
+                  <a href="/Hitesh_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                    <Download className="h-4 w-4 mr-2" />
+                    Download CV
+                  </a>
                 </Button>
               </div>
             </div>
